@@ -1,0 +1,85 @@
+{
+  "type": "FeatureCollection",
+  "name": "gangnam_station_entrances",
+  "metadata": {
+    "source": "overpass",
+    "generated_at": "2026-07-01T02:26:26.984Z"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "entrance_id": "osm_node_3404840062",
+        "name": "3",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0284757,
+          37.496666
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "entrance_id": "osm_node_3404840063",
+        "name": "6",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0280463,
+          37.4965253
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "entrance_id": "osm_node_5907762740",
+        "name": "강남",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0276077,
+          37.4979002
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "entrance_id": "osm_node_5927529147",
+        "name": "강남",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0275574,
+          37.4979497
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "entrance_id": "osm_node_6033315045",
+        "name": "강남",
+        "source": "osm"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.0275971,
+          37.4979494
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gangnam Station 3D Voxel Accessibility</title>
+  <script>
+    window.CESIUM_BASE_URL = 'https://cdn.jsdelivr.net/npm/cesium@1.142.0/Build/Cesium/';
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/cesium@1.142.0/Build/Cesium/Cesium.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/cesium@1.142.0/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+  <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+  <main id="appShell">
+    <div id="cesiumContainer" aria-label="강남역 반경 500m 3D 접근성 지도"></div>
+
+    <section id="panel" aria-label="시각화 제어">
+      <div class="panel-header">
+        <p class="eyebrow">Gangnam Station PoC</p>
+        <h1>강남역 3D 복셀 도보 접근성</h1>
+        <p class="meta" id="summaryMeta">반경 650m · 10m 복셀 · 보행속도 4km/h</p>
+      </div>
+
+      <div id="status" role="status">데이터를 불러오는 중...</div>
+
+      <div id="legend" aria-label="접근시간 색상 범례"></div>
+
+      <div class="controls">
+        <label class="toggle-row">
+          <input type="checkbox" id="toggleBuildings" checked>
+          <span>OSM 건물 표시</span>
+        </label>
+        <label class="toggle-row">
+          <input type="checkbox" id="toggleVoxels" checked>
+          <span>접근성 복셀 표시</span>
+        </label>
+
+        <label>
+          <span>색상 기준</span>
+          <select id="metricSelect">
+            <option value="time">접근시간</option>
+            <option value="distance">접근거리</option>
+            <option value="vertical">수직거리</option>
+          </select>
+        </label>
+
+        <label>
+          <span>높이 과장</span>
+          <select id="heightScale">
+            <option value="1">1x</option>
+            <option value="1.5">1.5x</option>
+            <option value="2">2x</option>
+          </select>
+        </label>
+
+        <label>
+          <span>복셀 투명도</span>
+          <input type="range" id="alphaRange" min="0.35" max="0.85" step="0.05" value="0.65">
+        </label>
+
+        <label>
+          <span>배경지도 투명도</span>
+          <input type="range" id="basemapAlpha" min="0.15" max="1" step="0.05" value="1">
+        </label>
+
+        <label>
+          <span>접근시간 필터</span>
+          <select id="timeFilter">
+            <option value="Infinity">전체</option>
+            <option value="3">3분 이하</option>
+            <option value="5">5분 이하</option>
+            <option value="7">7분 이하</option>
+            <option value="10">10분 이하</option>
+            <option value="gt10">10분 초과</option>
+          </select>
+        </label>
+      </div>
+
+      <div id="details" aria-live="polite">
+        복셀을 클릭하면 접근시간, 접근거리, 수직거리, 건물 ID가 표시됩니다.
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>

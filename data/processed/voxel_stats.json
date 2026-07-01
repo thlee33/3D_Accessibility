@@ -1,0 +1,20 @@
+{
+  "source": "overpass",
+  "generated_at": "2026-07-01T02:26:26.984Z",
+  "building_count": 447,
+  "subway_entrance_count": 5,
+  "voxel_count": 13361,
+  "original_voxel_count": 13361,
+  "voxel_limit_applied": false,
+  "class_counts": [
+    3354,
+    2906,
+    2541,
+    4348,
+    212
+  ],
+  "min_access_time_min": 0.121,
+  "max_access_time_min": 11.042,
+  "high_building_count": 72,
+  "height_or_level_tag_rate": 0.544
+}
